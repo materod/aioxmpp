@@ -40,3 +40,4 @@ Soporta los RFCs y numerosas extensiones XEPs:
 
 ## [slixmpp](https://pypi.org/project/slixmpp/)
 
+## [Twisted](https://www.twistedmatrix.com/trac/)
