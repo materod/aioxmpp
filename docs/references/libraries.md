@@ -26,6 +26,8 @@ Buenas prácticas:
 * Si ejecutamos una tarea que haga un uso intensivo del CPU, el resto de tareas y operaciones se verá retrasado. Para evitar esto, podemos ejevutar la tarea en otro _thread_ utilizando **loop.run_in_executor**.
 * Se puede ajustar el nivel de log de **asyncio** configurando el logging _logging.getLogger("asyncio").setLevel(logging.WARNING)_
 
+Buena explicación de como funciona la programacion asincrona: https://luminousmen.com/post/asynchronous-programming-python3.5
+
 ## [aioxmpp](https://pypi.org/project/aioxmpp/)
 
 Requieres al menos Python 3.4. Parece que es del lado del cliente, pero puede servirnos para probar el server y coger ideas.
@@ -40,4 +42,8 @@ Soporta los RFCs y numerosas extensiones XEPs:
 
 ## [slixmpp](https://pypi.org/project/slixmpp/)
 
+Requiere al menos Python 3.7. Su filosofia es mantener la simplicidad por lo que se intenta utilizar el menor numero de dependencias posible y que los XEP sean siempre "plugins". Se pueden usar XMPP Components. Para los puglins usan una API que permite sobreescribir la funcionalidad del core.
+
 ## [Twisted](https://www.twistedmatrix.com/trac/)
+
+No usa asyncio, tiene su propia implementación de asyncio pero no te impide usarlo tu en el desarrollo. Hay algunas utilidades de red que pueden ser utiles y hay una implementación de un cliente jabber, pero no esta claro sobre que versión del RFC (la antigua o la nueva) ni parece que este la parte de servidor.
